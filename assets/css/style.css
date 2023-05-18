@@ -10,6 +10,10 @@
     font-family: "Satoshi";
     src: url(../fonts/Satoshi-Regular.otf);
 }
+@font-face {
+    font-family: "Work Sans";
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
 
 * {
     margin: 0;
@@ -106,7 +110,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin-left: 64px;
+    margin-left: 138px;
     gap: 44px;
 }
 
@@ -217,11 +221,162 @@ main h1 br {
 
 .inquire-now:hover {
     background-color: #ffffff;
+    transition: 0.4s ease-in-out;
     cursor: pointer;
 }
 
 .inquire-now:hover p {
     color: black;
+}
+
+.first-section {
+    padding: 110px 0px;
+    margin: 70px auto;
+    display: flex;
+    max-width: 1150px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.first-section .image-wrapper {
+    position: relative;
+    flex: 1fr;
+}
+
+.first-section .image-wrapper .image-wrapper-main {
+    height: 800px;
+}
+
+.star1 {
+    position: absolute;
+    right: 0px;
+    top: 24px;
+    width: 50px;
+}
+
+.star2 {
+    position: absolute;
+    right: -25px;
+    top: 67px;
+    max-width: 26px;
+}
+
+.content {
+    max-width: 368px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-start;
+    gap: 56px;
+}
+
+.content h2 {
+    font-family: "Rische";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 110%;
+    /* or 59px */
+
+    /* Primary Colors/Black */
+
+    color: #000000;
+}
+
+.content p {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 180%;
+
+    /* Primary Colors/Black */
+
+    color: #000000;
+}
+
+.content button {
+    border: 1px solid #0047ff;
+    padding: 20px 48px;
+
+    /* Primary Colors/Blue */
+
+    background: #0047ff;
+    box-shadow: 6px 57px 23px rgba(26, 113, 255, 0.04), 3px 32px 20px rgba(26, 113, 255, 0.13),
+        2px 14px 14px rgba(26, 113, 255, 0.21), 0px 4px 8px rgba(26, 113, 255, 0.25),
+        0px 0px 0px rgba(26, 113, 255, 0.25);
+
+    font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.24em;
+
+    /* Primary Colors/White */
+
+    color: #ffffff;
+}
+
+.content button:hover {
+    cursor: pointer;
+    color: #0047ff;
+    background-color: #ffffff;
+    border: 1px solid #0047ff;
+    transition: 0.2s ease-in-out;
+}
+
+.content-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-wrapper {
+    width: 318px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-wrapper .info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-wrapper .info p {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+
+    /* Primary Colors/Medium Gray */
+
+    color: #838383;
+}
+
+.info-wrapper .info h4 {
+    font-family: "Rische";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    letter-spacing: 0.03em;
+
+    /* Primary Colors/Black */
+
+    color: #000000;
 }
 
 @media (screen > 1600px) {
