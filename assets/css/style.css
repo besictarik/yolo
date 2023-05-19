@@ -27,6 +27,7 @@ body {
     margin: auto;
     position: relative;
     z-index: -50;
+    overflow-x: hidden;
 }
 
 .hero {
@@ -240,9 +241,24 @@ nav {
     padding: 110px 0px;
     margin: 70px auto;
     display: flex;
-    max-width: 1150px;
+    max-width: 1190px;
     width: 100%;
     justify-content: space-between;
+}
+
+/*Margin is being modified using Js using handleMargin function*/
+.section--second {
+    padding: 110px 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(1190px + (1920px - 1190px) / 2);
+}
+
+.section-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 .section--first__image-wrapper {
@@ -272,9 +288,19 @@ nav {
     max-width: 368px;
     display: flex;
     flex-direction: column;
-    align-self: center;
     align-items: flex-start;
+}
+
+.section__content--first {
+    align-self: center;
+}
+
+.section__content--g56 {
     gap: 56px;
+}
+
+.section__content--g32 {
+    gap: 32px;
 }
 
 .section__title {
@@ -288,6 +314,26 @@ nav {
     /* Primary Colors/Black */
 
     color: #000000;
+}
+
+.section__title--blue {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+
+    /* Primary Colors/Blue */
+
+    color: #0047ff;
+}
+
+.section__title--m32 {
+    margin-top: -16px;
 }
 
 .section__text-wrapper {
@@ -394,12 +440,130 @@ nav {
     color: #ffffff;
 }
 
+.section__button--m56 {
+    margin-top: -24px;
+}
+
 .section__button:hover {
     cursor: pointer;
     color: #0047ff;
     background-color: #ffffff;
     border: 1px solid #0047ff;
     transition: 0.2s ease-in-out;
+}
+
+.section__slider {
+    max-width: 802px;
+    display: flex;
+    gap: 32px;
+}
+
+.slider__image {
+    width: 468px;
+    height: 652px;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.slider__image--first {
+    width: 468px;
+    background-image: url(../images/Rectangle\ 53.png);
+}
+
+.slider__image--second {
+    width: 302px;
+    background-image: url(../images/Rectangle\ 54.png);
+}
+
+.slider__image__subtitle {
+    position: absolute;
+    bottom: 109px;
+    left: 56px;
+
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+
+    /* Primary Colors/White */
+
+    color: #ffffff;
+}
+
+.slider__image__name {
+    position: absolute;
+    bottom: 65px;
+    left: 56px;
+
+    font-family: "Rische";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    /* identical to box height, or 36px */
+
+    letter-spacing: 0.03em;
+
+    /* Primary Colors/White */
+
+    color: #ffffff;
+}
+
+.slider__image__name::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 4px;
+    width: 70%;
+    height: 3px;
+    transition: 0.4s ease-in-out;
+
+    /* Primary Colors/Blue */
+
+    background: #0047ff;
+}
+
+.slider__image:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.slider__image:hover .slider__image__name::after {
+    width: 100%;
+    transition: 0.2s ease-in-out;
+}
+
+.section__arrows {
+}
+
+.section__arrow {
+    width: 48px;
+    height: 48px;
+
+    /* Primary Colors/Blue */
+
+    background: #0047ff;
+    backdrop-filter: blur(23.2456px);
+    filter: drop-shadow(6px 57px 23px rgba(26, 113, 255, 0.04)) drop-shadow(3px 32px 20px rgba(26, 113, 255, 0.13))
+        drop-shadow(2px 14px 14px rgba(26, 113, 255, 0.21)) drop-shadow(0px 4px 8px rgba(26, 113, 255, 0.25))
+        drop-shadow(0px 0px 0px rgba(26, 113, 255, 0.25));
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 49px;
+
+    background-image: url(../images/Group.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.section__arrow--right {
+    transform: rotate(180deg);
 }
 
 @media (screen > 1600px) {
