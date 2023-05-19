@@ -255,10 +255,25 @@ nav {
     max-width: calc(1190px + (1920px - 1190px) / 2);
 }
 
-.section-wrapper {
+.section--third {
+    padding: 110px 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(1190px + (1920px - 1190px) / 2);
+}
+
+/*There is no --first*/
+.section-wrapper--left {
     width: 100%;
     display: flex;
     justify-content: end;
+}
+
+.section-wrapper--right {
+    width: 100%;
+    display: flex;
+    justify-content: start;
 }
 
 .section--first__image-wrapper {
@@ -293,6 +308,11 @@ nav {
 
 .section__content--first {
     align-self: center;
+}
+
+.section__content--third {
+    align-self: center;
+    max-width: 466px !important;
 }
 
 .section__content--g56 {
@@ -592,6 +612,42 @@ nav {
 
 .section__arrow--right::before {
     transform: rotate(180deg);
+}
+
+/*END OF SECTIONS*/
+/*END OF SECTIONS*/
+
+.reviews {
+    width: 100%;
+    max-width: calc(1920px - 136px);
+    padding: 110px 0px;
+    margin-left: 136px;
+}
+
+.reviews__header {
+    display: flex;
+    gap: 249px;
+    margin-top: 16px;
+}
+
+.reviews__posts-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    margin-top: 72px;
+    overflow-y: auto;
+}
+
+.reviews__posts-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.reviews__post {
+    min-width: 668px;
+    height: 372px;
+    /* Primary Colors/Light Gray */
+
+    background: #fafafa;
 }
 
 @media (screen > 1600px) {
