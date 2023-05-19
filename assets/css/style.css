@@ -29,7 +29,7 @@ body {
     z-index: -50;
 }
 
-.hero-wrapper {
+.hero {
     position: relative;
     z-index: -5;
     display: flex;
@@ -43,7 +43,7 @@ body {
     background-position: 80% 50%;
 }
 
-.hero-wrapper::before {
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -55,26 +55,30 @@ body {
     background: rgba(0, 0, 0, 0.4);
 }
 
-.hero-wrapper nav {
+nav {
     height: 108px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-
-    .logo {
-        justify-self: center;
-    }
 }
 
-.menu-wrapper {
+.nav__logo {
+    justify-self: center;
+}
+
+.menu {
     margin-left: 64px;
     display: flex;
     width: fit-content;
     gap: 8px;
 }
 
-.menu-wrapper p {
+.menu:hover {
+    cursor: pointer;
+}
+
+.menu__name {
     font-family: "Clash Display";
     font-style: normal;
     font-weight: 500;
@@ -91,20 +95,20 @@ body {
     color: #ffffff;
 }
 
-.menu-hamburger {
+.menu__hamburger {
     height: 13px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    .hamburger-line {
-        width: 26px;
-        height: 1.11px;
-        background-color: #ffffff;
-    }
 }
 
-main {
+.menu__hamburger__line {
+    width: 26px;
+    height: 1.11px;
+    background-color: #ffffff;
+}
+
+.main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -114,7 +118,7 @@ main {
     gap: 44px;
 }
 
-main h1 {
+.main__title {
     font-family: "Rische";
     font-style: normal;
     font-weight: 400;
@@ -129,7 +133,7 @@ main h1 {
     color: #ffffff;
 }
 
-main button {
+.main__button {
     padding: 20px 48px;
     gap: 10px;
 
@@ -153,31 +157,31 @@ main button {
     color: #ffffff;
 }
 
-main button:hover {
+.main__button:hover {
     background-color: #ffffff;
     color: #000;
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
 
-main h1 br {
+.main__title__break {
     display: block;
 }
 
-.scroller {
+.hero__scroller {
     position: absolute;
     height: 26px;
     bottom: 48px;
     left: 50%;
     transform: translate(-50%, 0);
-    animation: scrollAnimation 1s infinite alternate;
+    animation: scrollerAnimation 1s infinite alternate;
 }
 
-.scroller:hover {
+.hero__scroller:hover {
     cursor: pointer;
 }
 
-@keyframes scrollAnimation {
+@keyframes scrollerAnimation {
     0% {
         transform: translate(-50%, 0);
     }
@@ -186,7 +190,7 @@ main h1 br {
     }
 }
 
-.inquire-now {
+.hero__inquire {
     width: 225px;
     height: 64px;
     position: absolute;
@@ -201,7 +205,7 @@ main h1 br {
     backdrop-filter: blur(25px);
 }
 
-.inquire-now p {
+.hero__inquire__name {
     text-transform: uppercase;
     font-family: "Satoshi";
     font-style: normal;
@@ -215,21 +219,24 @@ main h1 br {
     color: #ffffff;
 }
 
-.inquire-now img {
+.hero__inquire__image {
     width: 75px;
 }
 
-.inquire-now:hover {
+.hero__inquire:hover {
     background-color: #ffffff;
     transition: 0.4s ease-in-out;
     cursor: pointer;
 }
 
-.inquire-now:hover p {
+.hero__inquire:hover .hero__inquire__name {
     color: black;
 }
 
-.first-section {
+/* END OF HERO SECTION*/
+/* END OF HERO SECTION*/
+
+.section--first {
     padding: 110px 0px;
     margin: 70px auto;
     display: flex;
@@ -238,30 +245,30 @@ main h1 br {
     justify-content: space-between;
 }
 
-.first-section .image-wrapper {
+.section--first__image-wrapper {
     position: relative;
     flex: 1fr;
 }
 
-.first-section .image-wrapper .image-wrapper-main {
+.section--first__main-image {
     height: 800px;
 }
 
-.star1 {
+.section--first__star--first {
     position: absolute;
     right: 0px;
     top: 24px;
     width: 50px;
 }
 
-.star2 {
+.section--first__star--second {
     position: absolute;
     right: -25px;
     top: 67px;
     max-width: 26px;
 }
 
-.content {
+.section__content {
     max-width: 368px;
     display: flex;
     flex-direction: column;
@@ -270,7 +277,7 @@ main h1 br {
     gap: 56px;
 }
 
-.content h2 {
+.section__title {
     font-family: "Rische";
     font-style: normal;
     font-weight: 500;
@@ -283,7 +290,28 @@ main h1 br {
     color: #000000;
 }
 
-.content p {
+.section__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section__subtitle {
+    font-family: "Rische";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    letter-spacing: 0.03em;
+
+    /* Primary Colors/Black */
+
+    color: #000000;
+}
+
+.section__text {
     font-family: "Work Sans";
     font-style: normal;
     font-weight: 300;
@@ -295,7 +323,50 @@ main h1 br {
     color: #000000;
 }
 
-.content button {
+.section__info-wrapper {
+    width: 318px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section__info--name {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+
+    /* Primary Colors/Medium Gray */
+
+    color: #838383;
+}
+
+.section__info--value {
+    font-family: "Rische";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    letter-spacing: 0.03em;
+
+    /* Primary Colors/Black */
+
+    color: #000000;
+}
+
+.section__button {
     border: 1px solid #0047ff;
     padding: 20px 48px;
 
@@ -316,67 +387,19 @@ main h1 br {
     display: flex;
     align-items: center;
     letter-spacing: 0.24em;
+    text-transform: uppercase;
 
     /* Primary Colors/White */
 
     color: #ffffff;
 }
 
-.content button:hover {
+.section__button:hover {
     cursor: pointer;
     color: #0047ff;
     background-color: #ffffff;
     border: 1px solid #0047ff;
     transition: 0.2s ease-in-out;
-}
-
-.content-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.info-wrapper {
-    width: 318px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.info-wrapper .info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.info-wrapper .info p {
-    font-family: "Work Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 100%;
-    /* identical to box height, or 12px */
-
-    letter-spacing: 0.23em;
-    text-transform: uppercase;
-
-    /* Primary Colors/Medium Gray */
-
-    color: #838383;
-}
-
-.info-wrapper .info h4 {
-    font-family: "Rische";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 100%;
-    /* identical to box height, or 24px */
-
-    letter-spacing: 0.03em;
-
-    /* Primary Colors/Black */
-
-    color: #000000;
 }
 
 @media (screen > 1600px) {

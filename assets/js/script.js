@@ -1,5 +1,5 @@
 const scroller = document.querySelector(".scroller");
-const firstSection = document.querySelector("#firstSection");
+const firstSection = document.querySelector("#section--first");
 
 const scrollToSection = () => {
     firstSection.scrollIntoView({
