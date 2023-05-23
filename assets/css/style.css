@@ -619,9 +619,9 @@ nav {
 
 .reviews {
     width: 100%;
-    max-width: calc(1920px - 136px);
+    max-width: 1920px;
     padding: 110px 0px;
-    margin-left: 136px;
+    padding-left: 136px;
 }
 
 .reviews__header {
@@ -635,7 +635,7 @@ nav {
     display: flex;
     gap: 32px;
     margin-top: 72px;
-    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .reviews__posts-wrapper::-webkit-scrollbar {
@@ -646,8 +646,56 @@ nav {
     min-width: 668px;
     height: 372px;
     /* Primary Colors/Light Gray */
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
     background: #fafafa;
+}
+
+.reviews__post:last-child {
+    margin-right: 32px;
+}
+
+.reviews__post__content {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 550px;
+    /* or 27px */
+
+    text-align: center;
+
+    /* Primary Colors/Black */
+
+    color: #000000;
+}
+
+.reviews__post__writer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.reviews__post__writer--img {
+    width: 48px;
+    height: 48px;
+}
+
+.reviews__post__writer--name {
+    font-family: "Rische";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    /* or 26px */
+
+    /* Primary Colors/Black */
+
+    color: #000000;
 }
 
 @media (screen > 1600px) {
